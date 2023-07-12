@@ -22,6 +22,15 @@ const everydayPack = new Backpack(
   "../assets/images/everyday.svg"
 );
 
+const nav = `
+
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Highlights</a></li>
+  <li><a href="#">Contact</a></li>
+
+`;
+
 const content = `
   
     <figure class="backpack__image">
@@ -52,8 +61,17 @@ const content = `
   
 `;
 
-const main = document.querySelector(".maincontent");
+/*New Nav*/
+const header = document.querySelector(".siteheader");
+const newNav = document.createElement("ul");
+newNav.classList.add("Navigation");
+newNav.style.display = "flex";
+/*newNav.querySelectorAll(nav).forEach(item => item.style.listStyle = "none");*/
+newNav.innerHTML = nav;
+header.append(newNav);
+/*End of New Nav*/
 
+const main = document.querySelector(".maincontent");
 const newArticle = document.createElement("article");
 newArticle.classList.add("backpack");
 newArticle.setAttribute("id", "everyday");
