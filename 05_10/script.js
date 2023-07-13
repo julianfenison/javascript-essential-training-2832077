@@ -65,8 +65,10 @@ const content = `
 const header = document.querySelector(".siteheader");
 const newNav = document.createElement("ul");
 newNav.classList.add("Navigation");
-newNav.style.display = "flex";
-/*newNav.querySelectorAll(nav).forEach(item => item.style.listStyle = "none");*/
+newNav.style.cssText = `display: flex;`;
+/*const newNavLi = document.querySelectorAll("li");
+newNavLi.forEach(item => item.style.listStyle = "none");
+newNav.querySelectorAll(nav).forEach(item => item.style.listStyle = "none");*/
 newNav.innerHTML = nav;
 header.append(newNav);
 /*End of New Nav*/
