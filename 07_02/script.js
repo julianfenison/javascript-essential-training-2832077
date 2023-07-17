@@ -7,4 +7,6 @@ let item = "flashlight";
 
 const collection = ["Piggy", item, 5, true];
 
+collection[collection.length] = "new item";
+
 console.log(collection);
