@@ -12,9 +12,34 @@ const everydayPack = new Backpack(
   15,
   26,
   26,
-  false,
+  true,
   "December 5, 2018 15:00:00 PST"
 );
+
+if(everydayPack.lidOpen === false){
+  everydayPack.lidOpen = "closed";
+} else {
+  everydayPack.lidOpen = "open";
+ };
+
+const content = `
+<main>
+      <article>
+        <h1>Everyday Backpack</h1>
+        <ul>
+          <li>Volume: ${everydayPack.volume}</li>
+          <li>Color: ${everydayPack.color}</li>
+          <li>Age: ${everydayPack.backpackAge()}</li>
+          <li>Number of pockets: ${everydayPack.pocketNum}</li>
+          <li>Left strap length: ${everydayPack.strapLength.left}</li>
+          <li>Right strap length: ${everydayPack.strapLength.right}</li>
+          <li>Lid status: ${everydayPack.lidOpen}</li>
+        </ul>
+      </article>
+</main>
+`;
+
+document.body.innerHTML = content;
 
 console.log("The everydayPack object:", everydayPack);
 console.log("The pocketNum value:", everydayPack.pocketNum);
