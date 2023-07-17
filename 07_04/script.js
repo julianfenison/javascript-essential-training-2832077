@@ -9,3 +9,17 @@
  */
 
 
+let julianItems = ["phone", "blue", 2, true, 44.4];
+
+console.log(julianItems);
+julianItems.pop();
+console.log(julianItems);
+julianItems.unshift(julianItems.pop());
+console.log(julianItems);
+julianItems.sort();
+console.log(julianItems);
+foundItem = julianItems.find(item => item > 1);
+console.log(foundItem);
+//didnt get the last one
+julianItems.splice(julianItems.indexOf(foundItem), 1);
+console.log(julianItems);
