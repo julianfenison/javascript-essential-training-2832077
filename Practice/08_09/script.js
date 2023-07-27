@@ -67,8 +67,7 @@ const addFigure = (currentPack) => {
   const newImage = new Image();
   newImage.src = currentPack.image;
   const newFigure = document.createElement("figure");
-  newFigure.innerHTML = `
-  `;
+  newFigure.innerHTML = newImage;
 };
 
 const addPack = (currentPack) => {
