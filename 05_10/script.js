@@ -22,14 +22,7 @@ const everydayPack = new Backpack(
   "../assets/images/everyday.svg"
 );
 
-const nav = `
 
-  <li><a href="#">Home</a></li>
-  <li><a href="#">About</a></li>
-  <li><a href="#">Highlights</a></li>
-  <li><a href="#">Contact</a></li>
-
-`;
 
 const content = `
   
@@ -62,16 +55,7 @@ const content = `
 `;
 
 /*New Nav*/
-const header = document.querySelector(".siteheader");
-const newNav = document.createElement("ul");
-newNav.classList.add("Navigation");
-newNav.style.cssText = `display: flex;`;
-/*const newNavLi = document.querySelectorAll("li");
-newNavLi.forEach(item => item.style.listStyle = "none");
-newNav.querySelectorAll(nav).forEach(item => item.style.listStyle = "none");*/
-newNav.innerHTML = nav;
-header.append(newNav);
-/*End of New Nav*/
+
 
 const main = document.querySelector(".maincontent");
 const newArticle = document.createElement("article");
@@ -80,3 +64,23 @@ newArticle.setAttribute("id", "everyday");
 newArticle.innerHTML = content;
 
 main.append(newArticle);
+
+
+const nav = `
+
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Highlights</a></li>
+  <li><a href="#">Contact</a></li>
+
+`;
+
+
+const mainNav = document.createElement("nav");
+mainNav.classList.add("Navigation");
+const navList = document.createElement("ul");
+navList.innerHTML = nav;
+mainNav.append(navList);
+
+document.querySelector(".siteheader").append(mainNav);
+/*End of New Nav*/

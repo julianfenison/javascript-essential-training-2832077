@@ -13,7 +13,7 @@ const formatter = (locale, currency, value) => {
   return formattedValue;
 }
 
-const tipCalculator = (sum, percentage,locale, currency) => {
+const tipCalculator = (sum, percentage, locale, currency) => {
   let tip = sum * (percentage / 100);
   let total = sum + tip;
   console.log(`

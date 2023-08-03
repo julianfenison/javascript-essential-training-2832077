@@ -6,6 +6,10 @@ body {
   height: 100vh;
 }
 
+.red {
+  border: 5px solid red;
+}
+
 .grid {
   margin: 0;
   padding: 1rem;
@@ -21,4 +25,12 @@ body {
   width: 6rem;
   height: 6rem;
   background-color: hsl(0, 0%, 90%);
+}
+
+.blue {
+  border: 5px solid blue;
+}
+
+.click {
+  background-color: green;
 }

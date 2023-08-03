@@ -24,7 +24,7 @@ const frogPack = new Backpack(
   3,
   10,
   10,
-  false,
+  true,
   "October 16, 2019 15:00:00 PST",
   "../assets/images/frog.svg"
 );
